@@ -1,0 +1,27 @@
+body{
+  background-image: url('../images/akan.jpg');
+  font-size: 28;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+}
+.overlay{
+  background-color: lightgreen;
+  margin-left: 25%;
+  margin-right: 16%;
+  border-radius: 10px;
+}
+
+h1{
+  text-decoration-color: black;
+}
+h2{
+  text-align: center;
+}
+.test-box {
+  border: 2px solid lightgreen;
+  padding: 6px;
+  margin: 20px;
+  background-color:lightgrey;
+  border-radius: 10px;
+}
