@@ -9,40 +9,43 @@
   <body>
       <div class="test-box">
         <h1>Find out the day you were born and your Akan name</h1>
-        <h2>It has never been this easy!!!</h2>
       </div>
       <div class="overlay">
         <div class="container">
          <h2>Akan Name Generator</h2>
-         <form>
+         <form name="myForm" class="form" onsubmit="validate();">
            <div class="form-group">
              <label for="number">Year of Birth:</label>
-             <input type="char" class="form-control" id="exampleinputyear"placeholder="Year of Birth" name="Year">
+             <input type="number" class="form-control" id="year"placeholder="Year of Birth" name="year">
            </div>
            <div class="form-group">
              <label for="month">Month of Birth:</label>
-             <input type="number" class="form-control" id="exampleinputmonth" placeholder="Month of Birth" name="month">
+             <input type="number" class="form-control" id="month" placeholder="Month of Birth" name="month">
            </div>
            <div class="form-group">
              <label for="date">Date of Birth:</label>
-             <input type="number" class="form-control" id="exampleinputdate" placeholder="Date of Birth" name="date">
+             <input type="number" class="form-control" id="date" placeholder="Date of Birth" name="date">
            </div>
            <div class="form-group">
             <label for="month">Gender</label><br>
             <div class="form-check form-check-inline">
-             <input class="form-check-input" type="checkbox" id="Male" value="Male">
+             <input class="form-check-input" name="gender" type="checkbox" id="male" value="Male">
              <label class="form-check-label" for="inlineCheckbox1">Male</label>
             </div>
             <div class="form-check form-check-inline">
-             <input class="form-check-input" type="checkbox" id="Female" value="Female">
+             <input class="form-check-input" name="gender" type="checkbox" id="female" value="Female">
              <label class="form-check-label" for="inlineCheckbox2">Female</label>
             </div>
            </div>
-           <button type="submit" class="btn btn-primary">Find Name</button>
+           <button type="submit" class="btn btn-primary" onclick="findName();">Discover Name</button>
            <br>
          </form>
        <p id="results"> </p>
       </div>
       </div>
+      <script src="js/script.js">
+
+      </script>
+
   </body>
 </html>

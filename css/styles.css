@@ -12,9 +12,15 @@ body{
   border-radius: 10px;
 }
 
-h1{
-  text-decoration-color: black;
+h1 {
+  font-family: sans-serif, cursive;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  font-size: 48px;
+  text-shadow: 0px 0px 2px lightgreen;
 }
+
 h2{
   text-align: center;
 }
