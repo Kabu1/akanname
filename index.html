@@ -7,45 +7,54 @@
     <link rel="stylesheet" href=css/bootstrap.css>
   </head>
   <body>
-      <div class="test-box">
-        <h1>Find out the day you were born and your Akan name</h1>
-      </div>
-      <div class="overlay">
-        <div class="container">
-         <h2>Akan Name Generator</h2>
-         <form name="myForm" class="form" onsubmit="validate();">
-           <div class="form-group">
-             <label for="number">Year of Birth:</label>
-             <input type="number" class="form-control" id="year"placeholder="Year of Birth" name="year">
-           </div>
-           <div class="form-group">
-             <label for="month">Month of Birth:</label>
-             <input type="number" class="form-control" id="month" placeholder="Month of Birth" name="month">
-           </div>
-           <div class="form-group">
-             <label for="date">Date of Birth:</label>
-             <input type="number" class="form-control" id="date" placeholder="Date of Birth" name="date">
-           </div>
-           <div class="form-group">
+    <div class="jumbotron">
+      <h1>AKAN NAMES</h1>
+      <p>Akan names are derived from Ghanian culture.
+         Frequently in Ghana, children are given their first name as a 'day name' which corresponds 
+         to the day in the week they were born. 
+         Most people do know when their birthdays are, but some might not know what day of the week they were born.
+        Luckily for us, there are ways to calculate the day of the week from a specific date.
+      </p>
+        
+    </div>
+   
+
+
+    <div class="overlay">
+      <div class="container">
+        <h2>Akan Name Generator</h2>
+        <form name="myForm" class="form">
+          <div class="form-group">
+            <label for="Year of Birth">Year Of Birth:</label>
+            <input type="number" class="form-control" id="year" placeholder="Year of Birth" name="year">
+          </div>
+          <div class="form-group">
+            <label for="month">Month of Birth:</label>
+            <input type="number" class="form-control" id="month" placeholder="Month of Birth" name="month">
+          </div>
+          <div class="form-group">
+            <label for="date">Date of Birth:</label>
+            <input type="number"id="date"  class="form-control"  placeholder="Date of Birth" name="date">
+          </div>
+          <div class="form-group">
             <label for="month">Gender</label><br>
             <div class="form-check form-check-inline">
-             <input class="form-check-input" name="gender" type="checkbox" id="male" value="Male">
-             <label class="form-check-label" for="inlineCheckbox1">Male</label>
+              <input class="form-check-input" name="gender" type="checkbox" id="male" value="Male">
+              <label class="form-check-label" for="inlineCheckbox1">Male</label>
             </div>
             <div class="form-check form-check-inline">
-             <input class="form-check-input" name="gender" type="checkbox" id="female" value="Female">
-             <label class="form-check-label" for="inlineCheckbox2">Female</label>
+              <input class="form-check-input" name="gender" type="checkbox" id="female" value="Female">
+              <label class="form-check-label" for="inlineCheckbox2">Female</label>
             </div>
-           </div>
-           <button type="submit" class="btn btn-primary" onclick="findName();">Discover Name</button>
-           <br>
-         </form>
-       <p id="results"> </p>
+          </div>
+          <button type="submit" class="btn btn-primary" onclick="findName();">Generate Name</button>
+          <br>
+        </form>
+        <p id="results"> </p>
       </div>
-      </div>
-      <script src="js/script.js">
+     
+    
 
-      </script>
-
+    <script src="js/script.js"></script>
   </body>
 </html>
