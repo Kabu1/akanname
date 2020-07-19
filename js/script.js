@@ -4,28 +4,36 @@ var femaleNames= ['Akosua','Adwoa','Abenaa','Akua',' Yaa','Afua','Ama'];
 var CC, YY, MM, DD, d, dayValue;
 
 function validateInfo(){
-  year = parseInt(document.getElementById("year").value);
-  month = parseInt(document.getElementById("month").value);
-  day = parseInt(document.getElementById("date").value);
-if( year <1900 || year > 2900){
+  var genders = document.getElementsByName('gender');
+if(document.year.value === "" || document.year.value.length!=4 || document.year.value>2200||document.year.value<=1800){
   alert("Invalid year of birth");
- 
+  document.year.focus();
+  return false;
 }
-if ( month < 1 || month > 12) {
+else if (document.month.value === "" || isNaN(document.month.value) || document.month.value.length !=2 || document.month.value >12 || document.month.value <=0) {
   alert("Invalid month of birth!");
-  
+  document.month.focus();
+  return false;
 }
 
-if( day < 1 || day >31 ) {
-  alert( "Invalid date of birth!" );
-     
-}
-
+else if( document.date.value === "" || isNaN( document.date.value ) ||
+  document.date.value.length != 2|| document.date.value >31 || document.date.value <= 0) {
+     alert( "Invalid date of birth!" );
+     document.day.focus() ;
+     return false;
+  }
+  else if(genders[0].checked===false && genders[1].checked===false ) {
+      alert("You must select male or female");
+      return false;
+  }
+  else{
+    return true ;
+  }
 }
 function calculateDayValue(){
-  year = parseInt(document.getElementById("year").value);
-  CC = parseInt(year.slice(0,2));
-  YY = parseInt(year.slice(2,4));
+  year = document.getElementById("year").value;
+  CC = parseInt(year.substring(0,2));
+  YY = parseInt(year.substring(2,4));
   MM = parseInt(document.getElementById("month").value);
   DD = parseInt(document.getElementById("date").value);
   d = ( ( (CC/4) -2*CC-1) + ( (5*YY/4) ) + ((26*(MM+1)/10) ) + DD)%7;
@@ -95,7 +103,6 @@ function getGender(){
   }
 }
 function findName(){
-  validateInfo();
   dayValue = calculateDayValue();
   getGender();
 }
