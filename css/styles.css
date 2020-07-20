@@ -6,7 +6,7 @@ body{
   text-align: center;
 }
 .overlay{
-  background-color: lightgreen;
+  background-color: rgb(181,221,164);
   margin-left: 25%;
   margin-right: 16%;
   border-radius: 10px;
